@@ -26,6 +26,7 @@ export type ToastContainerProps = {
 export const ToastContainer = ({
   hasToasts,
   placement,
+  styleprops,
   ...props
 }: ToastContainerProps) => (
   <div
@@ -37,6 +38,7 @@ export const ToastContainer = ({
       padding: gutter,
       pointerEvents: hasToasts ? null : 'none',
       position: 'fixed',
+      ...styleprops,
       ...placements[placement],
     }}
     {...props}
